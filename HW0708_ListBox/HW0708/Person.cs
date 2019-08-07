@@ -12,7 +12,6 @@ namespace HW0708
         private string name;
         private int age;
         private bool smoker;
-        public Action method { get; set; }
         public string Name
         {
             get
@@ -23,10 +22,6 @@ namespace HW0708
             {
                 this.name = value;
                 OnPropertyChanged("Name");
-                if (method != null)
-                {
-                    method.Invoke();
-                }
             }
         }
         public int Age
